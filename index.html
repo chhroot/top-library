@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
     <style>
-        book {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .book h2 {
-    margin: 0 0 10px 0;
-    font-size: 18px;
-  }
-  
-  .book h3 {
-    margin: 0 0 5px 0;
-    font-size: 16px;
-    font-style: italic;
-    color: #888;
-  }
-  
-  .book p {
-    margin: 0;
-    font-size: 14px;
-  }
-    </style>
-</head>
-<body>
-    <div id="books"></div>
-</body>
+      book {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
 
-<!-- took me a while to figure this out -->
-<script src="./index.js"></script>
+      .book h2 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+      }
+
+      .book h3 {
+        margin: 0 0 5px 0;
+        font-size: 16px;
+        font-style: italic;
+        color: #888;
+      }
+
+      .book p {
+        margin: 0;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container" id="books"></div>
+
+    <!-- Popup form component -->
+
+    <div id="form-container" class="form-container" style="display: none">
+      <form class="form">
+        <div class="element-container">
+          <label for="book-name">Name of the Book</label><br/>
+          <input type="text" id="book-name" name="book-name" />
+        </div>
+        <div class="element-container">
+          <label for="author-name">Author's name</label><br/>
+          <input type="text" id="author-name" name="author-name" />
+        </div>
+        <div class="element-container">
+          <label for="pages">Pages</label><br/>
+          <input type="text" id="pages" name="pages" />
+        </div>
+        <div class="element-container">
+          <label for="status">Read Status</label><br/>
+          <label class="switch">
+            
+            <input name="status" type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <span class="close-button" onclick="closeForm()">&times;</span>
+      </form>
+    </div>
+
+    <button class="button" onclick="showForm()">Add Book</button>
+  </body>
+
+  <!-- took me a while to figure this out -->
+  <script src="./index.js"></script>
 </html>
