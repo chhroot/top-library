@@ -38,7 +38,7 @@
 
 .grid-container{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 
@@ -55,6 +55,12 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
+}
+
+.status-container {
+  margin-top: 20px;
+  justify-content: space-between;
+  display: flex;
 }
 
 .form {

@@ -7,33 +7,6 @@
 
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-    <style>
-      book {
-        display: flex;
-        flex-direction: column;
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-
-      .book h2 {
-        margin: 0 0 10px 0;
-        font-size: 18px;
-      }
-
-      .book h3 {
-        margin: 0 0 5px 0;
-        font-size: 16px;
-        font-style: italic;
-        color: #888;
-      }
-
-      .book p {
-        margin: 0;
-        font-size: 14px;
-      }
-    </style>
   </head>
   <body>
     <div class="grid-container" id="books"></div>
@@ -54,13 +27,17 @@
           <label for="pages">Pages</label><br/>
           <input type="text" id="pages" name="pages" />
         </div>
+        
         <div class="element-container">
           <label for="status">Read Status</label><br/>
           <label class="switch">
-            
-            <input name="status" type="checkbox">
+            <input name="checkbox" type="checkbox" autocomplete="off">
             <span class="slider"></span>
           </label>
+        </div>
+
+        <div class="element-container">
+          <input type="button" value="Submit" class="add-book" id="add-book">
         </div>
 
         <span class="close-button" onclick="closeForm()">&times;</span>
